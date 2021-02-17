@@ -1,0 +1,44 @@
+form {
+    width: 20%;
+    margin: 10% auto;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    line-height: 1.5;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 3px;
+    width: 50%;
+}
+
+button {
+    display: block;
+    padding: 4px 6px;
+    background-color: #67a772;
+    border: 1px solid #cfcfcf;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+
+.loginContainer {
+    border: 1px solid #cfcfcf;
+    padding: 6% 5% 15% 5%;
+}
+
+form .btn {
+    width: 25%;
+}
+
+form .userInfo {
+    margin-bottom: 10px;
+}
