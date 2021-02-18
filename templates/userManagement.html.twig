@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Landing{% endblock %}
+{% block stylesheets %}
+    <link href="/css/usermanagement.css" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+
+{% embed "loggedin.html.twig" %}{% endembed %}
+
+{% endblock %}
