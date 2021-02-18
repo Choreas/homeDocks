@@ -1,3 +1,24 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Landing{% endblock %}
+{% block stylesheets %}
+    <link href="/css/landing.css" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+
+{% embed "loggedin.html.twig" %}{% endembed %}
+
+<div class="content-frame">
+  <h3>
+    Logged in as {{ user.username }}
+  </h1>
+  {% if is_granted("ROLE_ADMIN") %}
+    <button>Admin</button>
+  {% else %}
+    <span class="info">There is nothing you can do here. Have a nice day, though.</span>
+  {% endif %}
+</div>
+
+
+{% endblock %}

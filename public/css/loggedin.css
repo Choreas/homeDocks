@@ -1,0 +1,12 @@
+.logout-btn {
+  border: 1px solid brown;
+  background-color: brown;
+  color: white;
+  max-width: 5%;
+  margin-left: 95%;
+  padding: 0.1% 0.1% 0.1% 0.1%;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  outline: auto;
+}
