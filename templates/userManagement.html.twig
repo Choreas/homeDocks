@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Landing{% endblock %}
+{% block title %}User Management{% endblock %}
 {% block stylesheets %}
     <link href="/css/usermanagement.css" rel="stylesheet" />
 {% endblock %}
@@ -9,4 +9,27 @@
 
 {% embed "loggedin.html.twig" %}{% endembed %}
 
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Admin</th>
+        <th>Username</th>
+        <th>Mail</th>
+    </thead>
+    <tbody>
+        {% for user in users %}
+        <tr>
+            <td>{{user.id}}</td>
+            <td>{{"ROLE_ADMIN" in user.roles ? 'Admin' : ''}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.mail}}</td>
+            <td><a class="link-btn" x-ajax-href="/admin/users/delete/{{user.id}}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
+
+{% block js %}
 {% endblock %}
