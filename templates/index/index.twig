@@ -2,7 +2,7 @@
 
 {% block title %}Landing{% endblock %}
 {% block stylesheets %}
-    <link href="/css/landing.css" rel="stylesheet" />
+    <link href="/css/index.css" rel="stylesheet" />
 {% endblock %}
 
 {% block body %}
@@ -14,7 +14,7 @@
     Logged in as {{ user.username }}
   </h1>
   {% if is_granted("ROLE_ADMIN") %}
-    <button>Admin</button>
+    <a class="admin-btn" href="/admin/users">Admin</a>
   {% else %}
     <span class="info">There is nothing you can do here. Have a nice day, though.</span>
   {% endif %}
